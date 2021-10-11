@@ -2,17 +2,23 @@
 
 int itc_second_max_num(long long a)
 {
+    if(a<0)
+    {
+        a=a*(-1);
+    }
     if(itc_len_num(a)==1){return(-1);}
     int max1=0;
     int max2=0;
     int b=0;
     int l=itc_len_num(a);
-    for(int i;i<l;i++)
+    for(int i=0;i<l;i++)
     {
         b=a%10;
         if(b>max1)
         {
+            max2=max1;
             max1=b;
+
         }
         else if(b>max2)
         {
@@ -25,16 +31,21 @@ int itc_second_max_num(long long a)
 
 int itc_second_simple_max_num(long long a)
 {
+    if(a<0)
+    {
+        a=a*(-1);
+    }
     if(itc_len_num(a)==1){return(-1);}
     int max1=0;
     int max2=0;
     int b=0;
     int l=itc_len_num(a);
-    for(int i;i<l;i++)
+    for(int i=0;i<l;i++)
     {
         b=a%10;
         if(b>max1)
         {
+            max2=max1;
             max1=b;
         }
         else if(b>max2)

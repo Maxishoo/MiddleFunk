@@ -1,6 +1,10 @@
 #include "middle.h"
 int itc_rev_num(long long a)
 {
+    if(a==0)
+    {
+        return 0;
+    }
     int k=a%10;
     while( k == 0)
     {
@@ -50,7 +54,7 @@ bool itc_mirror_num(long long a)
 int itc_mirror_count(long long a)
 {
     int k=0;
-    for(long long i=1;i<a;i++)
+    for(long long i=1;i<a+1;i++)
     {
         if(itc_mirror_num(i)==true)
         {
