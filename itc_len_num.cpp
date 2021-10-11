@@ -6,6 +6,10 @@ int itc_len_num(long long a)
     {
         a=a*(-1);
     }
+    if(a==0)
+    {
+        return 1;
+    }
     while(a>0)
     {
         k=k+1;
