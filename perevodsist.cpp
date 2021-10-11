@@ -35,7 +35,7 @@ int itc_rev_bin_num(long long a)
     int b;
     int otv=0;
     int l=itc_len_num(a);
-    for(int i;i<l;i++)
+    for(int i=0;i<l;i++)
     {
         b=a%10;
         otv=otv+b*k;
@@ -51,7 +51,7 @@ int itc_rev_oct_num(long long a)
     int b;
     int otv=0;
     int l=itc_len_num(a);
-    for(int i;i<l;i++)
+    for(int i=0;i<l;i++)
     {
         b=a%10;
         otv=otv+b*k;

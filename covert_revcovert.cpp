@@ -12,17 +12,21 @@ int itc_covert_num(long long a,int sis)
     }
     else
     {
-    long long k=1;
-    long long otv=0;
-    long long b;
-    while(a>0)
-    {
-        b=a%sis;
-        otv=otv+b*k;
-        a=a/sis;
-        k=k*10;
-    }
-    return(otv);
+        if(a<0)
+        {
+            return (-1);
+        }
+        long long k=1;
+        long long otv=0;
+        long long b;
+        while(a>0)
+        {
+            b=a%sis;
+            otv=otv+b*k;
+            a=a/sis;
+            k=k*10;
+        }
+        return(otv);
     }
 }
 int itc_rev_covert_num(long long a,int sis)
@@ -35,7 +39,7 @@ int itc_rev_covert_num(long long a,int sis)
     int b;
     int otv=0;
     int l=itc_len_num(a);
-    for(int i;i<l;i++)
+    for(int i=0;i<l;i++)
     {
         b=a%10;
         otv=otv+b*k;

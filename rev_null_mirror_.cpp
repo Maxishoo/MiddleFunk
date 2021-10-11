@@ -3,7 +3,7 @@ int itc_rev_num(long long a)
 {
     if(a==0)
     {
-        return 0;
+        return 1;
     }
     int k=a%10;
     while( k == 0)
